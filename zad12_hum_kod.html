@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> zadanie 12 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+        &lt;!DOCTYPE html&gt;
+        <html>
+          &lt;head&gt;
+            &lt;title&gt; proste obliczenia&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div style="color:green; font-size:50px;"&gt;
+            &lt;script language="JavaScript"&gt;
+                const d1hum = prompt("d1=" + "");
+                const g1hum = prompt("g1=" + "");
+                const d2hum = prompt("d2=" + "");
+                const g2hum = prompt("g2=" + "");
+        
+                const hoursAmount = (d1hum - d2hum) * 24 + (g1hum - g2hum);
+                const secondsAmount = hoursAmount * 3600;
+        
+                document.write("d1=" + d1hum + "&lt;br&gt;");
+                document.write("d2=" + d2hum + "&lt;br&gt;");
+                document.write("g1=" + g1hum + "&lt;br&gt;");
+                document.write("g2=" + g2hum + "&lt;br&gt;");
+                document.write("Ilość sekund=" + secondsAmount + "&lt;br&gt;");
+            &lt;/script>
+            &lt;/div>
+            &lt;input type="button" value="zamknij okno" onclick="window.close()"/>
+          &lt;/body>
+        &lt;/html>

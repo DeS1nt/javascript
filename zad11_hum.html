@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green;font-size:50px;">
+    <script language="JavaScript">
+        var d1hum = prompt("D1=" + "");
+        var d2hum = prompt("D2=" + "");
+        var daysAmount = d1hum - d2hum;
+        var secondsAmount = daysAmount * 86400;
+
+        document.write("D1=" + d1hum + "<br>");
+        document.write("D2=" + d2hum + "<br>");
+        document.write("Ilość sekund=" + secondsAmount + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>
