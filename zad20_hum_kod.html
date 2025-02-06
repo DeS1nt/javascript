@@ -1,0 +1,82 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+  <html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function AB_hum() {
+      let aX_hum = parseFloat(document.getElementById('aX').value);
+      let aY_hum = parseFloat(document.getElementById('aY').value);
+
+      let bX_hum = parseFloat(document.getElementById('bX').value);
+      let bY_hum = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_hum - bX_hum) ** 2 + (aY_hum - bY_hum) ** 2)).toFixed(2);
+    }
+
+    function BC_hum() {
+      let bX_hum = parseFloat(document.getElementById('bX').value);
+      let bY_hum = parseFloat(document.getElementById('bY').value);
+
+      let cX_hum = parseFloat(document.getElementById('cX').value);
+      let cY_hum = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_hum - bX_hum) ** 2 + (cY_hum - bY_hum) ** 2)).toFixed(2);
+    }
+
+    function AC_hum() {
+      let aX_hum = parseFloat(document.getElementById('aX').value);
+      let aY_hum = parseFloat(document.getElementById('aY').value);
+      let cX_hum = parseFloat(document.getElementById('cX').value);
+      let cY_hum = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_hum - cX_hum) ** 2 + (aY_hum - cY_hum) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_hum()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_hum()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_hum()"><br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</html>
+  
